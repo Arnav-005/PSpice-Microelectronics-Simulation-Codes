@@ -1,0 +1,19 @@
+*CS amplifier frequency response 
+Vsig 1 0 AC 1 
+VDD 4 0 DC +3.3
+Rsig 1 2 10k
+RG1 3 4 2meg
+RG2 3 0 1.3meg
+RD 4 5 4.2k
+RS 6 0 630 
+RL 7 0 50k
+CCI 2 3 10u
+CCO 5 7 10u
+CS 6 0 10u
+M1 5 3 6 6 nmosfet W=22u L=0.6u
+.model nmosfet NMOS(LEVEL=1 TOX=9.50e-09 UO=460 LAMBDA=0.1 GAMMA=0.5 
++ VTO=0.7 PHI=0.8 LD=8.00e-08 JS=1.00e-08 CJ=5.70e-04 MJ=0.5
++ CJSW=1.20e-10 MJSW=0.4 PB=0.9 CGBO=3.80e-10 CGDO=4.00e-10 CGSO=4.00e-10)
+.AC DEC 20 1m 100gig
+.probe
+.end

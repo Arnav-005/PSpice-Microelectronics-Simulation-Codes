@@ -1,0 +1,11 @@
+*Ideal integrator 
+Vin 1 0 pulse(-5 5 0 0.01f 0.01f 0.5m 1m)
+R1 1 2 10k
+X1 0 2 4 5 3 uA741
+Vp 4 0 DC +15
+Vn 5 0 DC -15
+C1 2 3 10n
+.lib nom.lib
+.tran 0.01m 10m 0 0.01m
+.probe
+.end

@@ -1,0 +1,28 @@
+
+**** 11/08/24 02:06:11 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ *wein bridge oscillator
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+V1 4 0 15
+V2 0 5 15
+C1 5 2 10n
+R1 3 5 10k
+R2 2 0 10k
+C2 2 0 10n
+R3 3 1 2.1k
+R4 1 0 1k
+XU1 2 1 4 5 3 LT1001
+.lib nom.lib
+.tran 0.01m 4m 0 0.01m
+.end
+
+ERROR(ORPSIM-15108): Subcircuit LT1001 used by XU1 is undefined
+

@@ -1,0 +1,14 @@
+*Active LP filter
+V1 1 0 AC +1
+R1 1 2 10k
+C1 2 3 0.01u
+R2 2 3 10k
+RL 3 0 10k
+X1 0 2 4 5 3 uA741
+Vp 4 0 +10
+Vn 5 0 -10
+.lib nom.lib
+
+.ac dec 20 0.01 1meg
+.probe
+.end 

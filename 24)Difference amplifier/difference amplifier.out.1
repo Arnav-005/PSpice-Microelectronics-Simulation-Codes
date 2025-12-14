@@ -1,0 +1,33 @@
+
+**** 10/13/24 22:08:38 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *Difference amplifier
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+V1 1 0 sin(0 1 1k)
+V2 2 0 sin(0 5 1k)
+V3 0 6 10
+V4 5 0 10
+
+X1 4 3 5 6 7 uA741
+R1 3 1 2k
+R2 4 2 2k
+
+*attenuating resistors
+R3 4 0 4k
+R4 7 3 4k
+
+.tran 5m
+--------$
+ERROR(ORPSIM-16387): Missing value
+.lib nom.lib
+.probe
+.end
+

@@ -1,0 +1,28 @@
+
+**** 10/13/24 16:12:12 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *Ideal integrator 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+Vin 1 0 pulse(-5 5 0 0 0 0.5m 1m)
+R1 2 3 1k
+X1 0 2 4 5 3 uA741
+Vp 4 0 DC +15
+Vn 5 0 DC -15
+C1 6 2 1u
+.lib nom.lib
+.tran 0.01m 4m 0 0.01m
+.probe
+.end
+
+ERROR(ORPSIM-15141): Less than 2 connections at node 6.
+
+ERROR(ORPSIM-15142): Node 6 is floating
+

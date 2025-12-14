@@ -1,0 +1,17 @@
+# PSpice Temporary Files
+*.dat
+*.sim
+*.out
+*.txt
+*.log
+*.prp
+*.db
+*.bak
+*.autosave
+
+# Keep these
+!*.opj
+!*.dsn
+!*.cir
+!*.lib
+!*.stl

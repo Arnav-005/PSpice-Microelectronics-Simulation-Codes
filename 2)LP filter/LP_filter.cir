@@ -1,0 +1,8 @@
+*RC CIRCUIT
+R 1 2 5k
+C 2 0 0.1U
+V 1 0 AC 1
+
+.AC Dec 20 1 10MEG
+.probe
+.end

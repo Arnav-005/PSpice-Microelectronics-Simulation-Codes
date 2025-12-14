@@ -1,0 +1,37 @@
+
+**** 10/12/24 23:04:56 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *CE BJT Amplifier
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+Vsig 1 0 AC 1
+Vcc 3 0 +12V
+Rb1 2 0 10k
+Rb2 2 3 100k
+Rc 3 4 20k
+Re 5 0 1k
+RL 6 0 10k
+Cc1 1 2 1u
+Cc2 4 6 1u
+Ce 5 0 20u
+M1 4 2 5 5 nmosfet
+.model nmosfet NMOS (PHI=0.7 TOX=9.5E-09 XJ=0.2U TPG=1
++VTO=0.7 DELTA=8.8E-01 LD=5E-08 KP=1.56E-04
++U0=420 THETA=2.3E-01 RSH=2.0E+00 GAMMA=0.62
++NSUB=1.40E+17 NFS=7.20E+11 VMAX=1.8E+05 ETA=2.125E-02
++KAPPA=1E-01 CGDO=3.0E-10 CGSO=3.0E-10
++CGBO=4.5E-10 CJ=5.50E-04 MJ=0.6 CJSW=3E-10
++MJSW=0.35 PB=1.1)
+--------------$
+ERROR -- '1.1' is not a model parameter name
+.ac oct 10 1 100meg
+.probe
+.end
+

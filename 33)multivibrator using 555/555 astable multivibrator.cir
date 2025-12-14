@@ -1,0 +1,26 @@
+
+* Define Components
+VCC 1 0 DC 15V            ; Power supply for the 555 timer
+R1 1 2 10k                ; Resistor between VCC and pin 7 (10k ohm)
+R2 2 3 47k                ; Resistor between pin 7 and pin 6 (47k ohm)
+C1 3 0 10uF               ; Capacitor between pin 6 and ground (10uF)
+U1 4 0 7 3 6 2 5 0 555N   ; 555 Timer IC configuration
+
+* Define Connections for the 555 Timer IC
+XU1 1 2 3 4 5 6 7 0       ; 555 Timer pins connected as follows:
+                           ; Pin 1 - Ground (GND)
+                           ; Pin 2 - Trigger
+                           ; Pin 3 - Output
+                           ; Pin 4 - Reset (connected to VCC)
+                           ; Pin 5 - Control Voltage (usually left open)
+                           ; Pin 6 - Threshold
+                           ; Pin 7 - Discharge
+                           ; Pin 8 - VCC
+.lib nom.lib
+* Transient Analysis
+.TRAN 0.1ms 50ms          ; Simulate for 50 ms with a time step of 0.1 ms
+
+* Plot Output
+.PROBE                    ; Use PSpice Probe to observe the waveform at the output pin
+
+.END

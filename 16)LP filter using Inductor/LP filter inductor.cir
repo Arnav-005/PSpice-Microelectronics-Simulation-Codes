@@ -1,0 +1,9 @@
+*LP Filter using Inductor
+*RL CIRCUIT
+R 2 0 5k
+L 1 2 2m
+V 1 0 AC 1
+
+.AC Dec 20 1 100MEG
+.probe
+.end

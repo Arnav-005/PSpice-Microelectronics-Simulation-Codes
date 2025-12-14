@@ -1,0 +1,23 @@
+*BJT differential pair
+Q1 1 5 4  npn1
+Q2 2 6 4  npn2
+R1 4 7 20k
+V1 0 7 12
+V2 6 0 sin(0 10m 1k 0 0 180)
+V3 5 0 sin(0 10m 1k)
+R2 3 2 10k
+R3 3 1 10k
+V4 3 0 12
+
+.model npn1 NPN (Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++ Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++ Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++ Tr=46.91n Tf=411.1p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+
+.model npn2 NPN (Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++ Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++ Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++ Tr=46.91n Tf=411.1p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+.tran 0.01m 5m 0 0.01m
+.probe
+.end

@@ -1,0 +1,39 @@
+
+**** 10/13/24 20:27:35 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *MOS differential pair
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+R1 4 7 20k
+V1 0 7 12
+V2 6 0 sin(0 10m 1k 0 0 180)
+V3 5 0 sin(0 10m 1k)
+R2 3 2 10k
+R3 3 1 10k
+V4 3 0 12
+M1 1 5 4 4 nmos1 W=22u L=0.6u
+M2 2 6 4 4 nmos2 W=22u L=0.6u
+
+.model nmos1NMOS(LEVEL=1 TOX=9.50e-09 UO=460 LAMBDA=0.1 
++ GAMMA=0.5 VTO=0.7 PHI=0.8 LD=8.00e-08 JS=1.00e-08 CJ=5.70e-04 MJ=0.5
++ CJSW=1.20e-10 MJSW=0.4 PB=0.9 CGBO=3.80e-10 CGDO=4.00e-10 CGSO=4.00e-10)
+
+.model nmos2 NMOS(LEVEL=1 TOX=9.50e-09 UO=460 LAMBDA=0.1 
++ GAMMA=0.5 VTO=0.7 PHI=0.8 LD=8.00e-08 JS=1.00e-08 CJ=5.70e-04 MJ=0.5
++ CJSW=1.20e-10 MJSW=0.4 PB=0.9 CGBO=3.80e-10 CGDO=4.00e-10 CGSO=4.00e-10)
+
+.tran 0.01m 5m 0 0.01m
+.probe
+.end
+
+ERROR(ORPSIM-15113): Model nmos1 used by M1 is undefined
+
+ERROR(ORPSIM-15113): Model nmos2 used by M2 is undefined
+

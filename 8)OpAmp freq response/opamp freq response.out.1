@@ -1,0 +1,28 @@
+
+**** 10/08/24 23:38:59 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *OpAmp Freqency Response
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+X1 1 2 4 5 3 uA741
+R1 2 0 10k
+R2 2 3 10K
+Vp 4 0 +10V
+Vn 5 0 -10V
+Vin 1 0 AC 1m
+
+.lib nom.lib 
+
+.dec 100 1 1meg
+$
+ERROR(ORPSIM-16056): Unrecognizable command
+.probe
+.end
+

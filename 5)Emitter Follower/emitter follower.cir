@@ -1,0 +1,17 @@
+*emitter follower
+V1 1 0 SIN(0 1 1k)
+C1 2 1 1µ
+R2 2 0 51k
+R1 3 2 18k
+Q1 3 2 4 0 Q2N2222A
+RE 4 0 470
+Vcc1 3 0 12V
+C2 5 4 10µ
+RL 5 0 470
+.model Q2N2222A NPN (Is=14.34f Xti=3 Eg=1.11 Vaf=74.03 Bf=255.9 Ne=1.307
++ Ise=14.34f Ikf=.2847 Xtb=1.5 Br=6.092 Nc=2 Isc=0 Ikr=0 Rc=1
++ Cjc=7.306p Mjc=.3416 Vjc=.75 Fc=.5 Cje=22.01p Mje=.377 Vje=.75
++ Tr=46.91n Tf=411.1p Itf=.6 Vtf=1.7 Xtf=3 Rb=10)
+.tran 0.01m 4m 0 0.01m
+.probe
+.end

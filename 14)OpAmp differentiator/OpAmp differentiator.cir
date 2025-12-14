@@ -1,0 +1,15 @@
+*OpAmp differentiator 
+*Vin 1 0 pulse(-5 5 0 0.01f 0.01f 0.5m 1m)
+Vin 1 0 sin(0 5 1k)
+R1 2 3 16k
+R2 1 6 1.6k
+R3 7 0 1.5k
+X1 7 2 4 5 3 uA741
+Vp 4 0 DC +15
+Vn 5 0 DC -15
+C1 6 2 0.01u
+C2 2 3 0.01n
+.lib nom.lib
+.tran 0.01m 10m 0 0.01m
+.probe
+.end

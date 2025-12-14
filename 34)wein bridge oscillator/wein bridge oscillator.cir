@@ -1,0 +1,14 @@
+*wein bridge oscillator
+V1 4 0 15
+V2 0 5 15
+C1 5 2 10n
+R1 3 5 10k
+R2 2 0 10k
+C2 2 0 10n
+R3 3 1 2.1k
+R4 1 0 1k
+XU1 2 1 4 5 3 uA741
+.lib nom.lib
+.tran 10m 200m 0 10m
+.probe
+.end

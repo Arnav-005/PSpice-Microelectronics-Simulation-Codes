@@ -1,0 +1,13 @@
+*OpAmp
+X1 1 2 4 5 3 uA741
+R1 2 0 10k
+R2 2 3 10K
+Vp 4 0 +10V
+Vn 5 0 -10V
+Vin 1 0 sin(0 1 1k)
+
+.lib nom.lib 
+
+.tran 0.01m 4m 0 0.01m
+.probe
+.end

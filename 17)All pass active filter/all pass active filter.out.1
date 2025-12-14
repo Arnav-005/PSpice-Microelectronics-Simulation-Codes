@@ -1,0 +1,29 @@
+
+**** 10/12/24 23:50:52 *** PSpice 24.1.0 (4 September 2024) *** ID# 0 ********
+
+ *all pass active filter
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+X1 3 2 6 5 4 uA741
+R1 2 1 10k
+C1 3 0 0.01µ
+R2 3 1 10k
+V1 1 0 AC 1
+R3 4 2 10k
+V2 0 5 10
+V3 6 0 10
+R4 4 0 10k
+.lib nom.lib
+.ac dec 20 0 1meg
+-----------$
+ERROR(ORPSIM-16103): Invalid value
+.probe
+.end
+
